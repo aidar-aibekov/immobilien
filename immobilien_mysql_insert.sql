@@ -1,6 +1,4 @@
-immobilien_mysql_insert.sql
 
- 
 insert into besitzer (name, telefonnummer) values ('Nagima', '0700557577');
 insert into besitzer (name, telefonnummer) values ('Islam', '0558551056');
 insert into besitzer (name, telefonnummer) values ('Dosmir', '0700005500');
