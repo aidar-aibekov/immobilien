@@ -14,29 +14,21 @@ insert into haus (address, schaetzung, preis, besitzer_id) values ('Djal 15', 1,
 insert into kaufinteressanten (name) values ('Aidar');
 insert into kaufinteressanten (name) values ('Aibek');
 insert into kaufinteressanten (name) values ('Arkhat');
-Query OK, 1 row affected (0.01 sec)
+insert into kaufinteressanten (name) values ('Aiana');
+insert into kaufinteressanten (name) values ('Atai');
 
-mysql> insert into kaufinteressanten (name) values ('Aiana');
-Query OK, 1 row affected (0.00 sec)
+insert into verkauf(haus_id) values (2);
+insert into verkauf(haus_id) values (5);
+insert into verkauf(haus_id) values (1);
+insert into verkauf(haus_id) values (4);
+insert into verkauf(haus_id) values (3);
 
-mysql> insert into kaufinteressanten (name) values ('Atai');
-Query OK, 1 row affected (0.00 sec)
 
-mysql> insert into verkauf(haus) values ('Atai');
-ERROR 1054 (42S22): Unknown column 'haus' in 'field list'
-mysql> insert into verkauf(haus_id) values (2);
-Query OK, 1 row affected (0.00 sec)
-
-mysql> insert into verkauf(haus_id) values (5);
-Query OK, 1 row affected (0.31 sec)
-
-mysql> insert into verkauf(haus_id) values (1);
-Query OK, 1 row affected (0.00 sec)
-
-mysql> insert into verkauf(haus_id) values (4);
-Query OK, 1 row affected (0.02 sec)
-
-mysql> insert into verkauf(haus_id) values (3);
-Query OK, 1 row affected (0.00 sec)
-
-mysql> insert into haus_kaufint (haus_id) values (3);
+insert into haus_kaufint (haus_id, kauf_id) values (3, 2);
+insert into haus_kaufint (haus_id, kauf_id) values (1, 2);
+insert into haus_kaufint (haus_id, kauf_id) values (5, 1);
+insert into haus_kaufint (haus_id, kauf_id) values (3, 4);
+insert into haus_kaufint (haus_id, kauf_id) values (1, 5);
+insert into haus_kaufint (haus_id, kauf_id) values (1, 4);
+insert into haus_kaufint (haus_id, kauf_id) values (3, 1);
+insert into haus_kaufint (haus_id, kauf_id) values (5, 2);
