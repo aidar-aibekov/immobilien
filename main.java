@@ -1,14 +1,13 @@
 package DB2Project;
 
+import java.sql.SQLException;
+
 public class main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Connect conn = new Connect();
-        //conn.connect();
-        conn.addWerte("Islam", "24234343");
-        /*conn.printAll();
-        conn.printHaus();*/
-        conn.printBesitzer();
+        conn.unbedingtRufen();
+        conn.printHausBesitzer();
     }
 }
