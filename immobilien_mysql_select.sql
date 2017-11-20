@@ -44,3 +44,22 @@
 |       5 | Djal 15        |          1 |
 |       5 | Djal 15        |          2 |
 +---------+----------------+------------+
+
+select kaufinteressanten.id_kaufinteressanten, kaufinteressanten.name, haus.address
+    from kaufinteressanten
+    inner join haus_kaufint on
+    id_kaufinteressanten = kauf_id
+    inner join haus on
+    haus.id_haus = haus_kaufint.haus_id;
++----------------------+-------+----------------+
+| id_kaufinteressanten | name  | address        |
++----------------------+-------+----------------+
+|                    2 | Aibek | Tynystanova 14 |
+|                    4 | Aiana | Tynystanova 14 |
+|                    5 | Atai  | Tynystanova 14 |
+|                    1 | Aidar | Manas 4        |
+|                    2 | Aibek | Manas 4        |
+|                    4 | Aiana | Manas 4        |
+|                    1 | Aidar | Djal 15        |
+|                    2 | Aibek | Djal 15        |
++----------------------+-------+----------------+
