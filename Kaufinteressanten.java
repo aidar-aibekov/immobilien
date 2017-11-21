@@ -1,19 +1,28 @@
-package DB2Project;
+package entities;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Kaufinteressanten {
 
-    int id_kaufinteressanten;
-    String name;
+    private Integer id_kaufinteressanten;
+    private String name;
+    private Set<Haus> haeusen;
 
-    public Kaufinteressanten(String name) {
-        this.name = name;
+    public Kaufinteressanten(){
+
     }
 
-    public int getId_kaufinteressanten() {
+    public Kaufinteressanten(String name){
+        this.name = name;
+        haeusen = new HashSet<Haus>();
+    }
+
+    public Integer getId_kaufinteressanten() {
         return id_kaufinteressanten;
     }
 
-    public void setId_kaufinteressanten(int id_kaufinteressanten) {
+    public void setId_kaufinteressanten(Integer id_kaufinteressanten) {
         this.id_kaufinteressanten = id_kaufinteressanten;
     }
 
@@ -25,11 +34,14 @@ public class Kaufinteressanten {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Kaufinteressanten{" +
-                "id_kaufinteressanten=" + id_kaufinteressanten +
-                ", name='" + name + '\'' +
-                '}';
+    public Set<Haus> getHaeusen() {
+        return haeusen;
     }
+
+    public void setHaeusen(Set<Haus> haeusen) {
+        this.haeusen = haeusen;
+    }
+
+
+
 }

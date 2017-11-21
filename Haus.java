@@ -1,30 +1,35 @@
-package DB2Project;
+package entities;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 public class Haus {
 
-    int id_haus;
-    String address;
-    int schaetzung;
-    int preis;
-    int besitzer_id;
-    private ArrayList<Besitzer> hausBesitzer;
+    private Integer id_haus;
+    private String address;
+    private Integer schaetzung;
+    private Integer preis;
+    private Besitzer besitzer;
+    private Set<Kaufinteressanten> kaufinteressanten;
+    private Set<Verkauf> verkaefer;
 
-    public Haus(String address, int schaetzung, int preis, int besitzer_id) {
+    public Haus() {
+    }
+
+    public Haus(String address, int schaetzung, int preis, Besitzer besitzer) {
         this.address = address;
         this.schaetzung = schaetzung;
         this.preis = preis;
-        this.besitzer_id = besitzer_id;
-        hausBesitzer = new ArrayList<Besitzer>();
+        besitzer = new Besitzer();
+        kaufinteressanten = new HashSet<Kaufinteressanten>();
+        verkaefer = new HashSet<Verkauf>();
     }
 
-    public int getId_haus() {
+    public Integer getId_haus() {
         return id_haus;
     }
 
-    public void setId_haus(int id_haus) {
+    public void setId_haus(Integer id_haus) {
         this.id_haus = id_haus;
     }
 
@@ -36,46 +41,45 @@ public class Haus {
         this.address = address;
     }
 
-    public int getSchaetzung() {
+    public Integer getSchaetzung() {
         return schaetzung;
     }
 
-    public void setSchaetzung(int schaetzung) {
+    public void setSchaetzung(Integer schaetzung) {
         this.schaetzung = schaetzung;
     }
 
-    public int getPreis() {
+    public Integer getPreis() {
         return preis;
     }
 
-    public void setPreis(int preis) {
+    public void setPreis(Integer preis) {
         this.preis = preis;
     }
 
-    public int getBesitzer_id() {
-        return besitzer_id;
+    public Besitzer getBesitzer() {
+        return besitzer;
     }
 
-    public void setBesitzer_id(int besitzer_id) {
-        this.besitzer_id = besitzer_id;
+    public void setBesitzer(Besitzer besitzer) {
+        this.besitzer = besitzer;
     }
 
-    public void setHausBesitzer(ArrayList<Besitzer> besitzer){
-        this.hausBesitzer = besitzer;
+    public Set<Kaufinteressanten> getKaufinteressanten() {
+        return kaufinteressanten;
     }
 
-    public void addBesitzer(Besitzer besitzer){
-        hausBesitzer.add(besitzer);
+    public void setKaufinteressanten(Set<Kaufinteressanten> kaufinteressanten) {
+        this.kaufinteressanten = kaufinteressanten;
     }
 
-    @Override
-    public String toString() {
-        return "Haus{" +
-                "id_haus=" + id_haus +
-                ", address='" + address + '\'' +
-                ", schaetzung=" + schaetzung +
-                ", preis=" + preis +
-                ", besitzer_id=" + besitzer_id +
-                '}';
+    public Set<Verkauf> getVerkaefer() {
+        return verkaefer;
     }
+
+    public void setVerkaefer(Set<Verkauf> verkaefer) {
+        this.verkaefer = verkaefer;
+    }
+
+
 }

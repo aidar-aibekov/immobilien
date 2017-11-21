@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entities.Kaufinteressanten" table="kaufinteressanten" schema="immobilien">
+        <id name="id_kaufinteressanten">
+            <column name="id_kaufinteressanten" sql-type="int"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" length="255" not-null="true"/>
+        </property>
+        <set name="haeusen" table="haus_kaufint" cascade="all">
+            <key column="kauf_id" />
+            <many-to-many column="haus_id"  class="entities.Haus" />
+        </set>
+    </class>
+</hibernate-mapping>
