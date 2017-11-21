@@ -1,3 +1,6 @@
+Um Trigger zu hinzufügen, haben wir zusätzlich die neue Spalte wie "telefonnummer" und "name" in die Tabelle Verkauf erstellt.
+
+
 delimiter ;;
 create trigger immobilien.verkauf_after_insert after insert on verkauf for each row
 begin 
