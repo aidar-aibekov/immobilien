@@ -3,7 +3,6 @@ CREATE TABLE `Haus` (
 	`address` varchar(255) NOT NULL,
 	`schaetzung` INT(1) NOT NULL,
 	`preis` INT(11) NOT NULL,
-	`besitzer_id` INT(1) NOT NULL,
 	PRIMARY KEY (`id_haus`)
 );
 
@@ -23,6 +22,9 @@ CREATE TABLE `Kaufinteressanten` (
 CREATE TABLE `Verkauf` (
 	`id_verkauf` INT NOT NULL AUTO_INCREMENT,
 	`haus_id` INT(11) NOT NULL,
+	`name` varchar(255) NOT NULL,
+	`datum` varchar(255) NOT NULL,
+	`telefonnummer` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_verkauf`)
 );
 
@@ -31,7 +33,7 @@ CREATE TABLE `Haus_kaufint` (
 	`kauf_id` INT NOT NULL
 );
 
-ALTER TABLE `Haus` ADD CONSTRAINT `Haus_fk0` FOREIGN KEY (`besitzer_id`) REFERENCES `Besitzer`(`id_besitzer`);
+ALTER TABLE `Besitzer` ADD CONSTRAINT `Besitzer_fk0` FOREIGN KEY (`haus_id`) REFERENCES `Haus`(`id_haus`);
 
 ALTER TABLE `Verkauf` ADD CONSTRAINT `Verkauf_fk0` FOREIGN KEY (`haus_id`) REFERENCES `Haus`(`id_haus`);
 
