@@ -1,9 +1,9 @@
 
-insert into besitzer (name, telefonnummer) values ('Nagima', '0700557577');
-insert into besitzer (name, telefonnummer) values ('Islam', '0558551056');
-insert into besitzer (name, telefonnummer) values ('Dosmir', '0700005500');
-insert into besitzer (name, telefonnummer) values ('Aizada', '0778675600');
-insert into besitzer (name, telefonnummer) values ('Nurbala', '0702895589');
+insert into besitzer (name, telefonnummer, haus_id) values ('Nagima', '0700557577',3);
+insert into besitzer (name, telefonnummer, haus_id) values ('Islam', '0558551056',5);
+insert into besitzer (name, telefonnummer, haus_id) values ('Dosmir', '0700005500',2);
+insert into besitzer (name, telefonnummer, haus_id) values ('Aizada', '0778675600',4);
+insert into besitzer (name, telefonnummer, haus_id) values ('Nurbala', '0702895589',1);
 
 insert into haus (address, schaetzung, preis, besitzer_id) values ('Tynystanova 14', 3, 27000, 2 );
 insert into haus (address, schaetzung, preis, besitzer_id) values ('Fuchika 44', 3, 30000, 3 );
