@@ -17,11 +17,11 @@ insert into kaufinteressanten (name) values ('Arkhat');
 insert into kaufinteressanten (name) values ('Aiana');
 insert into kaufinteressanten (name) values ('Atai');
 
-insert into verkauf(haus_id) values (2);
-insert into verkauf(haus_id) values (5);
-insert into verkauf(haus_id) values (1);
-insert into verkauf(haus_id) values (4);
-insert into verkauf(haus_id) values (3);
+insert into verkauf(haus_id, name, datum, telefonnummer) values (3, 'Islam', '10.06.2006', '057029834384');
+insert into verkauf(haus_id, name, datum, telefonnummer) values (5, 'Dosmir', '08.06.1998', '045635757357');
+insert into verkauf(haus_id, name, datum, telefonnummer) values (2, 'Aizada', '24.11.2007', '08867856756');
+insert into verkauf(haus_id, name, datum, telefonnummer) values (4, 'Nurbala', '20.1.2016', '0563424657');
+insert into verkauf(haus_id, name, datum, telefonnummer) values (1, 'Nagima', '5.3.2015', '07831243626');
 
 
 insert into haus_kaufint (haus_id, kauf_id) values (3, 2);
